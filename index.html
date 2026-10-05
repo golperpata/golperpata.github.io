@@ -3,85 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golper Pata</title>
+
+<title>Golper Pata | বাংলা গল্পের পাতা</title>
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f3ee;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f4ef;
+  color: #3d2920;
+  line-height: 1.8;
+}
+
+/* Header */
 header {
-  background: #6b3f2a;
+  background: linear-gradient(135deg, #6f3f27, #9a5b38);
   color: white;
   text-align: center;
-  padding: 30px 15px;
+  padding: 35px 15px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 36px;
+.logo {
+  font-size: 34px;
+  font-weight: bold;
 }
 
-header p {
-  margin-top: 8px;
-  font-size: 16px;
+.tagline {
+  font-size: 15px;
+  margin-top: 5px;
+  opacity: 0.9;
 }
 
+/* Navigation */
 nav {
-  background: #432719;
-  text-align: center;
-  padding: 12px;
+  background: #3f2418;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 12px;
-  font-size: 15px;
+  padding: 9px 16px;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 25px auto;
-  padding: 0 15px;
+nav a:hover {
+  background: #9a5b38;
 }
 
-.story {
+/* Hero */
+.hero {
+  max-width: 1100px;
+  margin: 30px auto 20px;
+  padding: 45px 25px;
+  text-align: center;
   background: white;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
-.story h2 {
-  color: #6b3f2a;
-  margin-top: 0;
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-.story p {
-  line-height: 1.9;
-  font-size: 17px;
+.hero p {
+  color: #6d5b52;
+  max-width: 700px;
+  margin: auto;
 }
 
 .button {
   display: inline-block;
-  background: #6b3f2a;
+  margin-top: 20px;
+  padding: 11px 25px;
+  background: #7a452b;
   color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
   text-decoration: none;
+  border-radius: 25px;
 }
 
-footer {
+.button:hover {
+  background: #4f2b1d;
+}
+
+/* Section */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px 20px 40px;
+}
+
+.section-title {
   text-align: center;
-  background: #432719;
+  font-size: 25px;
+  margin: 30px 0 20px;
+}
+
+/* Story Cards */
+.stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #6d5b52;
+  font-size: 14px;
+}
+
+.read {
+  display: inline-block;
+  margin-top: 12px;
+  color: #7a452b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* About */
+.about {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/* Footer */
+footer {
+  background: #3f2418;
   color: white;
-  padding: 20px;
-  margin-top: 40px;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 30px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .hero {
+    margin: 20px 12px;
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .stories {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 2px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
 }
 </style>
 </head>
@@ -89,41 +209,87 @@ footer {
 <body>
 
 <header>
-  <h1>Golper Pata</h1>
-  <p>গল্পের পাতায় আপনাকে স্বাগতম</p>
+  <div class="logo">📖 Golper Pata</div>
+  <div class="tagline">গল্পের পাতায় আপনাকে স্বাগতম</div>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#">Love Stories</a>
-  <a href="#">Short Stories</a>
-  <a href="#">About Us</a>
+  <a href="index.html">হোম</a>
+  <a href="love-stories.html">প্রেমের গল্প</a>
+  <a href="story1.html">ছোট গল্প</a>
+  <a href="about.html">আমাদের সম্পর্কে</a>
 </nav>
+
+<section class="hero">
+  <h1>গল্পের জগতে আপনাকে স্বাগতম ❤️</h1>
+
+  <p>
+    Golper Pata-তে পড়ুন বাংলা প্রেমের গল্প,
+    ছোট গল্প এবং মনের মতো সুন্দর সব লেখা।
+  </p>
+
+  <a class="button" href="story1.html">গল্প পড়ুন →</a>
+</section>
 
 <div class="container">
 
-  <div class="story">
-    <h2>আমাদের গল্প</h2>
-    <p>
-      Golper Pata-তে আপনাকে স্বাগতম।
-      এখানে আপনি বাংলা গল্প, প্রেমের গল্প,
-      ছোট গল্প এবং বিভিন্ন সুন্দর লেখা পড়তে পারবেন।
-    </p>
-    <a class="button" href="#">গল্প পড়ুন</a>
+  <h2 class="section-title">✨ আমাদের গল্প</h2>
+
+  <div class="stories">
+
+    <div class="card">
+      <div class="card-icon">❤️</div>
+      <h3>প্রেমের গল্প</h3>
+      <p>
+        ভালোবাসা, অনুভূতি আর সম্পর্কের সুন্দর
+        গল্পগুলো পড়ুন।
+      </p>
+      <a class="read" href="love-stories.html">
+        গল্প পড়ুন →
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📚</div>
+      <h3>ছোট গল্প</h3>
+      <p>
+        অল্প সময়ে পড়ে ফেলার মতো সুন্দর
+        বাংলা ছোট গল্প।
+      </p>
+      <a class="read" href="story1.html">
+        গল্প পড়ুন →
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">✍️</div>
+      <h3>নতুন গল্প</h3>
+      <p>
+        খুব শীঘ্রই এখানে নতুন নতুন বাংলা
+        গল্প প্রকাশ করা হবে।
+      </p>
+      <a class="read" href="story1.html">
+        পড়ুন →
+      </a>
+    </div>
+
   </div>
 
-  <div class="story">
-    <h2>নতুন গল্প আসছে...</h2>
+  <div class="about">
+    <h2>🌿 Golper Pata সম্পর্কে</h2>
+
     <p>
-      খুব শীঘ্রই এখানে নতুন নতুন বাংলা গল্প প্রকাশ করা হবে।
+      Golper Pata হলো বাংলা গল্পপ্রেমীদের জন্য
+      একটি ছোট্ট গল্পের ঠিকানা। এখানে আপনি
+      প্রেমের গল্প, ছোট গল্প এবং বিভিন্ন ধরনের
+      সুন্দর লেখা পড়তে পারবেন।
     </p>
   </div>
 
 </div>
 
 <footer>
-  © 2026 Golper Pata
+  <p>© 2026 Golper Pata | বাংলা গল্পের পাতা</p>
 </footer>
 
-</body>
-</html>
+</b
